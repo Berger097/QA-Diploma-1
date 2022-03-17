@@ -1,6 +1,6 @@
 # DiplomQA
 ## Инструкция по подключению БД, запуску SUT и авто-тестов
-- инструкция описана для MacOS Big Sur Версия 11.6 64-бит, M1
+- выполнено на: MacOS Big Sur Версия 11.6 64-бит, M1
 ### 1. Склонировать проект
 - репозиторий: https://github.com/KateKomratova/DiplomQA.git 
 - команда: `git clone` 
@@ -16,5 +16,5 @@
 - команда для запуска с подключением PostgreSQL: `./gradlew clean test -Ddb.url=jdbc:postgresql://localhost:5432/app`
 ### 5. Сгенерировать отчеты Allure
 - команды для генерации: `./gradlew allureReport` и `./gradlew allureServe`
-- для завершения работы allureServe выполнить команду: `Command + С`
+- для завершения работы allureServe выполнить команду: `Control + С`
 
