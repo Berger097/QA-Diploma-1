@@ -9,12 +9,13 @@ branches:
 build: off
 
 install:
+  - sudo curl -L "https://github.com/docker/compose/releases/download/1.28.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - sudo chmod +x /usr/local/bin/docker-compose
   - docker-compose up
   - sleep 10
   - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar &
   - sleep 10
 
 build_script:
-
   - chmod +x gradlew
   - ./gradlew clean test -Ddb.url=jdbc:postgresql://localhost:5432/app -Dselenide.headless=true --info
