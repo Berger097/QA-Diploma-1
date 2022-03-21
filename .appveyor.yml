@@ -12,8 +12,8 @@ install:
   - java -jar ./artifacts/aqa-shop.jar &
 
 build_script:
-  - docker-compose up -d
-  - sleep 20
+  - docker-compose up
+  - sleep 30
   - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar &
   - sleep 10
   - chmod +x gradlew
