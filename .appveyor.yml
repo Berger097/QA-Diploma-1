@@ -9,12 +9,12 @@ branches:
 build: off
 
 install:
-  - java -jar ./artifacts/aqa-shop.jar &
-
-build_script:
   - docker-compose up
   - sleep 10
-  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
+  - java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar &
   - sleep 10
+
+build_script:
+
   - chmod +x gradlew
   - ./gradlew clean test -Ddb.url=jdbc:postgresql://localhost:5432/app -Dselenide.headless=true --info
