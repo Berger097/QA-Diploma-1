@@ -2,7 +2,7 @@
 ## Инструкция по подключению БД, запуску SUT и авто-тестов
 - выполнено на: MacOS Big Sur Версия 11.6 64-бит, M1
 ### 1. Склонировать проект
-- репозиторий: https://github.com/KateKomratova/DiplomQA.git 
+- репозиторий:https://github.com/Berger097/QA-Diploma-1.git
 - команда: `git clone` 
 ### 2. Скачать и запустить в Docker контейнеры 
 - СУБД: MySQL (image mariadb), PostgreSQL; Node.js
