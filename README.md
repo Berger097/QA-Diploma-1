@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/120ivsw4wxev9h3c?svg=true)](https://ci.appveyor.com/project/Berger097/qa-diploma-1)
 # DiplomQA
 ## Инструкция по подключению БД, запуску SUT и авто-тестов
 - выполнено на: MacOS Big Sur Версия 11.6 64-бит, M1
