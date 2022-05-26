@@ -68,7 +68,7 @@ public class CreditPageTest {
                 getSecondCardNumber(), getMonthCard(0), getYearCard(1), getOwnerCard(), getCvc());
         var creditPage = startPage.paymentOnCredit();
         creditPage.getFillCardDetails(card);
-        creditPage.successfulPaymentCreditCard();
+        creditPage.invalidPaymentCreditCard();
         String actual = DbInteractionDbUtils.getStatusCredit();
         assertEquals("DECLINED", actual);
     }
@@ -81,7 +81,7 @@ public class CreditPageTest {
                 getSecondCardNumber(), getMonthCard(0), getYearCard(0), getOwnerCard(), getCvc());
         var creditPage = startPage.paymentOnCredit();
         creditPage.getFillCardDetails(card);
-        creditPage.successfulPaymentCreditCard();
+        creditPage.invalidPaymentCreditCard();
         String actual = DbInteractionDbUtils.getStatusCredit();
         assertEquals("DECLINED", actual);
     }

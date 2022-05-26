@@ -68,7 +68,7 @@ public class PaymentPageTest {
                 getSecondCardNumber(), getMonthCard(0), getYearCard(1), getOwnerCard(), getCvc());
         var paymentPage = startPage.payment();
         paymentPage.getFillCardDetails(card);
-        paymentPage.successfulPaymentDebitCard();
+        paymentPage.invalidPaymentDebitCard();
         String actual = DbInteractionDbUtils.getStatusPayment();
         assertEquals("DECLINED", actual);
     }
@@ -81,7 +81,7 @@ public class PaymentPageTest {
                 getSecondCardNumber(), getMonthCard(0), getYearCard(0), getOwnerCard(), getCvc());
         var paymentPage = startPage.payment();
         paymentPage.getFillCardDetails(card);
-        paymentPage.successfulPaymentDebitCard();
+        paymentPage.invalidPaymentDebitCard();
         String actual = DbInteractionDbUtils.getStatusPayment();
         assertEquals("DECLINED", actual);
     }
