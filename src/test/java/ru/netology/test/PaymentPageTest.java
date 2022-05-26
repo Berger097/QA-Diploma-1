@@ -24,7 +24,7 @@ public class PaymentPageTest {
 
     @BeforeEach
     public void setUp() {
-        Configuration.headless = true;
+       // Configuration.headless = true;
         open("http://localhost:8080");
     }
 

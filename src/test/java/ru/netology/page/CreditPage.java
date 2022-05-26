@@ -41,7 +41,7 @@ public class CreditPage {
 
     public void invalidPaymentCreditCard() {
         $(".notification_status_error")
-                .shouldBe(visible).shouldHave(text("Ошибка Ошибка! Банк отказал в проведении операции."), Duration.ofSeconds(15));
+                .shouldHave(text("Ошибка! Банк отказал в проведении операции."), Duration.ofSeconds(20)).shouldBe(visible);
     }
 
     public void checkInvalidFormat() {

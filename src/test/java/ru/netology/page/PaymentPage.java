@@ -1,12 +1,14 @@
 package ru.netology.page;
 
 import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.CardInfo;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -19,6 +21,7 @@ public class PaymentPage {
     private SelenideElement cvcField = $("input[placeholder='999']");
     private SelenideElement ownerField = $$(".input__control").get(3);
     private SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
+    private final SelenideElement failureNote =  $(byText("Ошибка! Банк отказал в проведении операции."));
 
     public PaymentPage() {
         headingPayment.shouldBe(visible);
@@ -41,7 +44,7 @@ public class PaymentPage {
 
     public void invalidPaymentDebitCard() {
         $(".notification_status_error")
-                .shouldBe(visible).shouldHave(text("Ошибка Ошибка! Банк отказал в проведении операции."), Duration.ofSeconds(15));
+                .shouldHave(text("Ошибка! Банк отказал в проведении операции."), Duration.ofSeconds(20)).shouldBe(visible);
     }
 
     public void checkInvalidFormat() {
