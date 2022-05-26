@@ -16,6 +16,6 @@
 - добавить test-id для ускорения автоматизации тестирования
 - Устранить дефекты обнаруженные на этапе тестирования - https://github.com/KateKomratova/DiplomQA/issues
 ## 5. AllureReport
-![]()
+![](https://github.com/Berger097/QA-Diploma-1/blob/main/documentation/AllureReport/AllureReport%209.png)
 ![]()
 
